@@ -12,7 +12,7 @@ app.listen(PORT, () => {
   console.log(`App running on port ${PORT}.`);
 });
 
-app.get("/menu", (request: Request, response: any) => {
+app.get("/menu", (request, response) => {
   response.status(200).send(menu);
 });
 
