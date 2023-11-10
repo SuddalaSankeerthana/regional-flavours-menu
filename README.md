@@ -12,6 +12,11 @@
 - It is an application which shows the data in an API.
 - It is developed using typescript.
 
+## Installations are requirements :
+
+- you need to have nodeJs to be installed in your desktop.
+- You are required to have docker setup. Go through [https://www.docker.com/get-started/]
+
 ## Features :
 - Created an API with express to fetch everyday's recipes in the restaurant.
 - Each recipe contains the following information :
