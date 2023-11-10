@@ -31,6 +31,10 @@
   cd regional-flavours-menu
 - Run the following to build an image.
   ```
-  docker build -t getting-started .
+  docker build -t regional-flavours .
+  ```
+- Run the following command to start the server.
+  ```
+  docker run regional-flavours
   ```
 
