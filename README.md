@@ -27,8 +27,9 @@
   git clone https://github.com/SuddalaSankeerthana/regional-flavours-menu.git
   ```
 -  Navigate into the folder :
-  ```
-  cd regional-flavours-menu
+    ```
+    cd regional-flavours-menu
+    ```
 - Run the following to build an image.
   ```
   docker build -t regional-flavours .
