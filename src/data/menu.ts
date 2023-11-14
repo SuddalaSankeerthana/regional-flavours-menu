@@ -4,7 +4,7 @@ interface Menu {
   isVegan: boolean;
   isGluttenFree: boolean;
 }
-const menu: Menu[] = [
+const todayFoodMenuData: Menu[] = [
   {
     name: "Paneer Biryani",
     type: "Main course",
@@ -25,6 +25,7 @@ const menu: Menu[] = [
   },
 ];
 function getMenuData(): Menu[] {
-  return menu;
+  return todayFoodMenuData;
 }
-export default getMenuData;
+export default todayFoodMenuData;
+// export default getMenuData;
