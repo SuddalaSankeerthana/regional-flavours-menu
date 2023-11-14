@@ -23,8 +23,11 @@
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.23.3",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "kill-port": "^2.0.1",
+    "mysql2": "^3.6.3",
+    "sequelize": "^6.35.0",
     "supertest": "^6.3.3"
   }
 }
