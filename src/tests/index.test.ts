@@ -10,4 +10,5 @@ describe("Server get and post methods testing", () => {
 });
 afterAll(() => {
   kill(3000, "tcp").then(console.log).catch(console.log);
+  kill(8080, "tcp").then(console.log).catch(console.log);
 });
