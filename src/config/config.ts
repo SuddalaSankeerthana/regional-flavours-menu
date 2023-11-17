@@ -1,11 +1,9 @@
-const { Sequelize } = require("sequelize");
-require("dotenv").config();
-console.log(process.env["DB_USER"], process.env["DB_PASSWORD"]);
-require("dotenv").config({ path: __dirname + "/.env" });
+import { Sequelize } from "sequelize";
+import "dotenv/config";
 const sequelize = new Sequelize(
-  "menu",
-  process.env["DB_USER"],
-  process.env["DB_PASSWORD"],
+  process.env["DB_NAME"] || "today_menu",
+  process.env["DB_USER"] || "root",
+  process.env["DB_PASSWORD"] || "",
   {
     host: process.env["DB_HOST"],
     logging: false,

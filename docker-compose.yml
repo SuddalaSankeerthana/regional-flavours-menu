@@ -1,0 +1,34 @@
+version: '3'
+services:
+  mysqldb:
+    image: mysql:latest
+    env_file: ./.env
+    environment:
+      - MYSQL_ROOT_PASSWORD=$DB_PASSWORD
+      - MYSQL_DATABASE=$DB_NAME
+    volumes:
+      - db:/var/lib/mysql
+    ports:
+      - $DB_LOCAL_PORT:$DB_DOCKER_PORT
+    expose:
+      - $DB_DOCKER_PORT
+    networks:
+      - mysqlnetwork
+  app:
+    depends_on:
+      - mysqldb
+    build: ./
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT:$NODE_DOCKER_PORT
+    expose:
+      - $NODE_DOCKER_PORT
+    networks:
+      - mysqlnetwork
+
+networks:
+  mysqlnetwork:
+    driver: bridge
+
+volumes: 
+  db:

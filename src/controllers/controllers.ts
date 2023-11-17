@@ -2,7 +2,7 @@ import sequelize from "../config/config";
 import todayFoodMenuData from "../data/menu";
 import Menu from "../models/model";
 
-const creteFoodMenuData = (req: any, res: any) => {
+const creteFoodMenuData = () =>
   sequelize
     .sync({ force: true })
     .then(() => {
@@ -25,5 +25,4 @@ const creteFoodMenuData = (req: any, res: any) => {
     .catch((error: Error) => {
       console.error("Unable to create table : ", error);
     });
-};
 export default creteFoodMenuData;
