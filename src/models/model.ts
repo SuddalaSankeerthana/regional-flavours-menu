@@ -1,5 +1,5 @@
 import sequelize from "../config/config";
-const { DataTypes } = require("sequelize");
+import { DataTypes } from "sequelize";
 const Menu = sequelize.define(
   "MenuDetail",
   {
@@ -10,12 +10,5 @@ const Menu = sequelize.define(
   },
   { timestamps: false, createdAt: false, updatedAt: false }
 );
-sequelize
-  .sync()
-  .then(() => {
-    console.log("Menu table created successfully!");
-  })
-  .catch((error: Error) => {
-    console.error("Unable to create table : ", error);
-  });
+(async () => await sequelize.sync({ force: true }))();
 export default Menu;

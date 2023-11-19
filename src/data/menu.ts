@@ -28,4 +28,3 @@ function getMenuData(): Menu[] {
   return todayFoodMenuData;
 }
 export default todayFoodMenuData;
-// export default getMenuData;
